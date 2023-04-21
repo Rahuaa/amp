@@ -1,0 +1,35 @@
+package com.example.myapplication
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        print("Oncreate")
+    }
+    override fun onStart() {
+        super.onStart()
+        print("onStart")
+    }
+    override fun onResume() {
+        super.onResume()
+        print("onResume")
+    }
+    override fun onStop() {
+        super.onStop()
+        print("onStop")
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        print("onDestroy")
+    }
+    override fun onRestart() {
+        super.onRestart()
+        print("onRestart") }
+    fun print(msg:String){
+        Log.d("Activity State: ", msg)
+    }
+}
